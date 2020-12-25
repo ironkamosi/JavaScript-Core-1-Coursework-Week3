@@ -6,17 +6,31 @@
 
 var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
 
-function isInUK(country) {
-  return; // complete this statement
+/*function isInUK(country) {
+  if (ukNations.includes(country)){
+   return true;
+  }else
+  return false; // complete this statement
+}*/
+
+function homeMadeIncludes(arr,anyValue){
+  for (let i = 0; i<arr.length;i++){
+    let currentELement = arr[i];
+  if (currentELement === anyValue){
+   return true  
+  }
+  }
+  return false
 }
 
+console.log(homeMadeIncludes(ukNations,"England"))
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-console.log(isInUK("France"));
+/*console.log(isInUK("France"));
 console.log(isInUK("Republic of Ireland"));
 console.log(isInUK("England"));
-
+*/
 /* 
   EXPECTED RESULT
   ---------------

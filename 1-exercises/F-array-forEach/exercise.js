@@ -6,8 +6,23 @@
 
   An array with numbers 1-15 has been provided.
 */
-
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+
+function calculateArry (arrayNumber){
+    if (arrayNumber % 3 === 0 && arrayNumber % 5 === 0 ){
+    console.log ("FizzBuzz")
+    } else if (arrayNumber % 3 === 0){
+     console.log ("Fizz") 
+    }else if (arrayNumber % 5 === 0){
+     console.log ("Buzz")
+     } else {
+     console.log(arrayNumber)
+     }
+
+} 
+arr.forEach(calculateArry)
+  
 
 /* EXPECTED OUTPUT */
 

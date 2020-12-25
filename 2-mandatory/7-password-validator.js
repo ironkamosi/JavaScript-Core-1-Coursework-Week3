@@ -22,9 +22,51 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
 
-}
+/* 
+create a function 
+  create a new  variable  
+      for loop
+        if , else if, else
+          return true, return false boolean 
+              push the return value to the previous variable container 
+                return value
+
+
+
+
+*/
+function validatePasswords(passwords) {
+  let acceptedPasswords = []
+  for (i = 0; i < passwords.length; i++) {
+    let password = passwords[i];
+    password = password.split("");
+    if (password.length >= 5 && password.some(char => a.includes(char)) && password.some(char => b.includes(char)) &&
+      password.some(char => c.includes(char)) && password.some(char => d.includes(char))) {
+      acceptedPasswords.push(true); 
+    }else {
+      acceptedPasswords.push(false);
+    }
+  }
+  return acceptedPasswords;
+} 
+
+
+const a = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
+          "m", "n", "o", "p", "q", "r", "s", "t", "u","v", "w", "x", "y", "z"]
+  
+const b = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+          "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+           
+const c = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+const d = ["!", "#", "$", "%", ".", "*", "&"]
+
+
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

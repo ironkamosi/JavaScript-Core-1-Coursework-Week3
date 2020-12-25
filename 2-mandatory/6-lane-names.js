@@ -6,7 +6,50 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+/* semi-pseudo code*
+                           
+create a function with a single parameter (variable)
+  create an if condition with the variable and use the indexOf method
+    return variable
+
+
+*/
+
+
+
+
+function getLanes(arrayOfData) {
+  return arrayOfData.filter(streetFinder);
+//   let newStreetName = [];
+//   for (let i = 0; i < arrayOfData.length;i++)
+//    //for (let j = 1; j < arrayOfData.length;j++)
+//     if (arrayOfData.indexOf() && arrayOfData.filter(streetFinder)) {  
+//       arrayOfData = arrayOfData[i];
+//       return 
+//     }
+ } 
+
+
+function streetFinder(streetName) {
+ return streetName.includes("Lane"); 
+}
+
+
+/*
+
+function colonisers(arrLastName) { 
+  let acceptedVoyagers = [];
+  for (let i = 0; i < voyagers.length; i++) {
+    if (voyagers[i][0] === "A" && voyagers[i].includes("family")) {  
+      acceptedVoyagers.push(voyagers[i]);
+    }
+  } return acceptedVoyagers;
+ 
+}  
+*/
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

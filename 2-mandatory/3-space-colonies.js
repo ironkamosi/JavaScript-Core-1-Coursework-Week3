@@ -15,8 +15,34 @@
   
 */
 
-function colonisers() {}
+/*
+function finalResultCall(element) {
+ // console.log(element);
+  if (Array.isArray(element) && element.length === 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+*/
+function colonisers(arrLastName) { 
+  let acceptedVoyagers = [];
+  for (let i = 0; i < voyagers.length; i++) {
+    if (voyagers[i][0] === "A" && voyagers[i].includes("family")) {  
+      acceptedVoyagers.push(voyagers[i]);
+    }
+  } return acceptedVoyagers;
+ 
+}  
 
+/*  
+loop the array
+create 2 conditions - 1 first element of the string with "A", 2 - include "family"
+create an array outside of the loop
+if it passes both conditions  push to array
+strings are arrays of characters
+variables have to be declared before the code is executed 
+*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [

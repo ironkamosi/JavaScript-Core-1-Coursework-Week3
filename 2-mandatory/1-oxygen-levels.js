@@ -11,7 +11,31 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+/* 
+create a condition 
+function IsOxygenOkay(percentage){
+  let percentage = 19.5 && 23.5
+ if (percentage !== oxgenLevels1 || oxyenLevels2 || oxygenLevels3)
+} 
+(percentage <= ){
+  return true
+} else {
+  return false
+  console.log("This is planet is not safe for human life")
+}
+*/
+
+function safeLevels(arrayOfOxygenLevels) {
+  for (let i = 0; i < arrayOfOxygenLevels.length; i++){
+    let value = arrayOfOxygenLevels[i];
+    value = value.substring(0,value.indexOf("%"));
+   // value = parseFloat(value);
+    console.log(value)
+    if (value > 19.5 && value < 23.5){
+      return value + "%";
+    } 
+   } 
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

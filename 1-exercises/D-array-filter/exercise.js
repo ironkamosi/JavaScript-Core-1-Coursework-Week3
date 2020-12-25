@@ -6,9 +6,18 @@
   - Do not edit any of the existing code
 */
 
+function finalResultCall(element) {
+ // console.log(element);
+  if (Array.isArray(element) && element.length === 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(finalResultCall);
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];

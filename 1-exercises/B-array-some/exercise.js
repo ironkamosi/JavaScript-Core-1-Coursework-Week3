@@ -1,5 +1,6 @@
 /*
-  You are given a program that logs pairings between mentors and students
+  You are given a program that logs pairings between mentors and 
+  students
   It fails because the array `pairsById` can contain null values
   It is decided that if there is a null value the program should exit
   - Add a check for null values, and if one exists, exit the program
@@ -7,6 +8,29 @@
 */
 
 var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
+
+// function nullValue(elementOfArr) {
+//   if (elementOfArr === null) {
+//     return true;
+//   } else {
+//     return false;
+//   } 
+// }
+
+function nullValue(elementOfArr) {
+  if (elementOfArr === null) {
+    return true;
+  } else {
+    return false;
+  } 
+}
+// process data board process.abort(true)
+
+var nullIdentifier = pairsByIndex.some(nullValue);
+if (nullIdentifier === true){
+  console.log("You have a null value")
+  process.exit(1)
+}
 
 // If there is a null value in the array exit the program with the error code
 // https://nodejs.org/api/process.html#process_process_exit_code

@@ -7,7 +7,16 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+function capitalise(str) {
+  str = str.split("");
+  str[0]= str[0].toUpperCase();
+  str = str.join("");
+  return str
+}
+
+
+ // console.log(str.split("")[0].toUpperCase().join("")) // ["d", "a", ...]
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE

@@ -17,11 +17,20 @@
  Hint: search for string methods like Includes and IndexOf.
 */
 
+
+/*
+semi-pseudo code
+ create a function a single parameter, inside of the function
+  create a condition which checks if the variable contains the word "code"
+    if the condition is true return the index of the paramter,
+      else return not found
+*/
+
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
-    return stringText;
+  if (stringText.includes(magicWord)) {
+    return stringText.indexOf(magicWord);
   } else {
     return "Not found";
   }
@@ -64,7 +73,28 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() {}
+
+
+/*
+Semi- pseudo 
+
+divide the array in two new separate arrays, one for the location and the other for modes of transport 
+  access the index of the array , [0] for the location and the additional indices for modes of transport 
+  use split method
+    
+ */
+
+
+
+
+
+
+
+function getTransportModes(arrayOfData) {
+  return (arrayOfData.slice(1))
+  
+  }
+
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -81,7 +111,13 @@ function getTransportModes() {}
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(arrayOfTransport, stringElement) {
+  if (arrayOfTransport.includes(stringElement)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
   Implement the function getLocationName that
@@ -92,8 +128,18 @@ function isAccessibleByTransportMode() {}
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-function getLocationName() {}
+function getLocationName(arrayData) {
+  return arrayData[0] ;
+}
 
+
+/*
+create a function that has the parameter of the arrayData
+  create add the array with indexOF [0]
+    return the value
+   
+
+*/
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
 
@@ -120,10 +166,55 @@ function getLocationName() {}
    - Use array method to manipulate its elements.
    
   Advanced challange: try to use arrow function when invoking an array method.
+  */
+
+/* 
+create a function 
+       map the function for locations 
+        map the function for transport
+          add a variable with the includes method
+            create log
+              return value
+
 */
+
+
+/**
+function getLanes(arrayOfData) {
+  return arrayOfData.filter(streetFinder);
+ } 
+
+
+function streetFinder(streetName) {
+ return streetName.includes("Lane"); 
+} */
+
+
 function journeyPlanner(locations, transportMode) {
+  let locationNames = []
+  for (i = 0; i < locations.length; i++){
+    if (locations[i].includes(transportMode)) {
+      locationNames.push(locations[i][0]);
+    }
+  }
+  return locationNames;
+}
+
+/*
+function journeyPlanner(locations, transportMode) {
+  let filteredData = locations.filter(locationData => locationData; );
+  filteredData = filteredData.map(data => data[0]);
+  return filteredData 
   // Implement the function body
 }
+*/
+/**function locationAndTransportChecker(arrayOfData,transportMode) {
+    if (arrayOfData.includes(transportMode)) {
+      return true;
+    }
+  } */
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
