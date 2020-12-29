@@ -39,10 +39,13 @@ create a function
 function validatePasswords(passwords) {
   let acceptedPasswords = []
   for (i = 0; i < passwords.length; i++) {
-    let password = passwords[i];
-    password = password.split("");
+    let password2 = passwords[i];
+    //console.log("password is",password2)   
+    let password = password2.split("");
     if (password.length >= 5 && password.some(char => a.includes(char)) && password.some(char => b.includes(char)) &&
-      password.some(char => c.includes(char)) && password.some(char => d.includes(char))) {
+      password.some(char => c.includes(char)) && password.some(char => d.includes(char)) && passwords.indexOf(password2) === i)
+       {
+      console.log(password, password2)
       acceptedPasswords.push(true); 
     }else {
       acceptedPasswords.push(false);
@@ -50,7 +53,14 @@ function validatePasswords(passwords) {
   }
   return acceptedPasswords;
 } 
+/*
+      passwords.indexOf(password2) === i
 
+&& if !(passwords.includes(password){
+  
+}
+
+ */
 
 const a = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
           "m", "n", "o", "p", "q", "r", "s", "t", "u","v", "w", "x", "y", "z"]
